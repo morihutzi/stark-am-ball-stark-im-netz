@@ -116,6 +116,11 @@ export const dorfnerConfig: TenantConfig = {
     },
   },
 
+  appStores: {
+    ios: 'https://apps.apple.com/de/app/kidgonet/id6759919131',
+    android: 'https://play.google.com/store/apps/details?id=de.kidgonet.kidprotection.v2',
+  },
+
   testimonial: {
     image: {
       src: '/images/manuel-neuer.jpg',
@@ -125,7 +130,7 @@ export const dorfnerConfig: TenantConfig = {
     attribution: 'Manuel Neuer, Weltmeister und Vater',
     cta: {
       label: 'Jetzt downloaden!',
-      href: 'https://portal.kidgonet.de/#!/register',
+      href: 'https://portal.kidgonet.de/welcome',
       external: true,
     },
   },

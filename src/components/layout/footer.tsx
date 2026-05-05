@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Container } from '@/components/ui/container'
+import { StoreBadges } from '@/components/ui/store-badges'
 import type { TenantConfig } from '@/tenants/types'
 
 type FooterProps = {
@@ -33,6 +34,14 @@ export function Footer({ tenant }: FooterProps) {
               />
             </div>
             <p className="max-w-md text-sm text-foreground/70">{tenant.footer.blurb}</p>
+            {tenant.appStores ? (
+              <StoreBadges
+                ios={tenant.appStores.ios}
+                android={tenant.appStores.android}
+                size="sm"
+                className="mt-5 flex sm:hidden"
+              />
+            ) : null}
           </div>
 
           <nav>

@@ -134,6 +134,15 @@ export type TenantConfig = {
     cta: CtaLink
   }
 
+  /**
+   * Optionale Store-Links für iOS und Android. Wenn gesetzt, rendern
+   * Sektionen wie Footer und Testimonial die offiziellen Badges.
+   */
+  appStores?: {
+    ios?: string
+    android?: string
+  }
+
   trust: {
     headline: string
     items: TrustItem[]

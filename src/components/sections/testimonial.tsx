@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Container } from '@/components/ui/container'
 import { Button } from '@/components/ui/button'
+import { StoreBadges } from '@/components/ui/store-badges'
 import type { TenantConfig } from '@/tenants/types'
 
 type TestimonialProps = {
@@ -57,7 +58,9 @@ export function Testimonial({ tenant }: TestimonialProps) {
             <p className="mt-4 text-sm font-medium text-foreground/60 sm:text-base">
               {testimonial.attribution}
             </p>
-            <div className="mt-6 flex justify-center sm:mt-7 lg:justify-start">
+            {/* Desktop/Tablet: Button → Welcome-Flow. Auf Mobile stattdessen
+             * Store-Badges, weil das Handy direkt installieren kann. */}
+            <div className="mt-6 hidden justify-center sm:mt-7 sm:flex lg:justify-start">
               <Button
                 href={testimonial.cta.href}
                 external={testimonial.cta.external}
@@ -66,6 +69,13 @@ export function Testimonial({ tenant }: TestimonialProps) {
                 {testimonial.cta.label}
               </Button>
             </div>
+            {tenant.appStores ? (
+              <StoreBadges
+                ios={tenant.appStores.ios}
+                android={tenant.appStores.android}
+                className="mt-6 flex justify-center sm:hidden"
+              />
+            ) : null}
           </div>
         </div>
       </Container>
