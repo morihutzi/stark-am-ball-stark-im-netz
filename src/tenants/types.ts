@@ -44,9 +44,20 @@ export type FooterLink = {
  * Wird sowohl für Medienführerschein-Module als auch für App-Features
  * verwendet, da beide dieselbe Form haben.
  */
+export type ForParentsIcon =
+  | 'hourglass'
+  | 'shield-check'
+  | 'app-window'
+  | 'map-pin'
+  | 'brain'
+  | 'compass'
+  | 'lock'
+  | 'search'
+
 export type ForParentsItem = {
   title: string
   description: string
+  icon: ForParentsIcon
 }
 
 export type ForParentsBlock = {
@@ -110,6 +121,17 @@ export type TenantConfig = {
     subheadline?: string
     mediaLicense: ForParentsBlock
     app: ForParentsBlock
+  }
+
+  /**
+   * Optionales Testimonial mit Foto, Zitat, Attribution und CTA.
+   * Z.B. Manuel-Neuer-Block aus kidgonet.de.
+   */
+  testimonial?: {
+    image: ImageAsset
+    quote: string
+    attribution: string
+    cta: CtaLink
   }
 
   trust: {

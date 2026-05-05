@@ -58,18 +58,22 @@ export const dorfnerConfig: TenantConfig = {
         {
           title: 'Bildschirmzeit verstehen',
           description: 'Warum dein Gehirn Pausen braucht und wie du selbst merkst, wann es Zeit ist aufzuhören.',
+          icon: 'brain',
         },
         {
           title: 'Sicher unterwegs',
           description: 'Was tun, wenn ein Fremder schreibt, eine Werbung lockt, ein Inhalt verstört.',
+          icon: 'compass',
         },
         {
           title: 'Privatsphäre schützen',
           description: 'Welche Daten gehören mir, und welche darf ich teilen.',
+          icon: 'lock',
         },
         {
           title: 'Fake oder echt?',
           description: 'Wie du Werbung von Inhalten unterscheidest und Bilder hinterfragst.',
+          icon: 'search',
         },
       ],
       link: {
@@ -86,18 +90,22 @@ export const dorfnerConfig: TenantConfig = {
         {
           title: 'Bildschirmzeit klar regeln',
           description: 'Limits pro App und pro Tag, die Ihr Kind selbst versteht. Schluss mit Aushandeln am Esstisch.',
+          icon: 'hourglass',
         },
         {
           title: 'Sicherer Webfilter',
           description: 'Altersgerechte Filter automatisch, ohne dass Sie jeden Link prüfen müssen.',
+          icon: 'shield-check',
         },
         {
           title: 'Apps freigeben',
           description: 'Sie entscheiden, was läuft. Ihr Kind weiß, woran es ist.',
+          icon: 'app-window',
         },
         {
           title: 'Standort & Familienfunktionen',
           description: 'Wissen, wo Ihr Kind ist, wenn das Training endet. Ohne Detektivarbeit.',
+          icon: 'map-pin',
         },
       ],
       link: {
@@ -105,6 +113,20 @@ export const dorfnerConfig: TenantConfig = {
         href: 'https://www.kidgonet.de',
         external: true,
       },
+    },
+  },
+
+  testimonial: {
+    image: {
+      src: '/images/manuel-neuer.jpg',
+      alt: 'Manuel Neuer',
+    },
+    quote: 'Kidgonet vereint pädagogische Verantwortung und Sicherheit.',
+    attribution: 'Manuel Neuer, Weltmeister und Vater',
+    cta: {
+      label: 'Jetzt downloaden!',
+      href: 'https://portal.kidgonet.de/#!/register',
+      external: true,
     },
   },
 

@@ -3,6 +3,7 @@ import { Hero } from '@/components/sections/hero'
 import { CoInitiative } from '@/components/sections/co-initiative'
 import { Atmosphere } from '@/components/sections/atmosphere'
 import { ForParents } from '@/components/sections/for-parents'
+import { Testimonial } from '@/components/sections/testimonial'
 import { Trust } from '@/components/sections/trust'
 import { getAllTenantIds, getTenant } from '@/tenants/registry'
 
@@ -25,6 +26,7 @@ export default async function TenantPage({ params }: PageProps) {
       <Hero tenant={tenant} />
       <CoInitiative tenant={tenant} />
       <Atmosphere tenant={tenant} />
+      <Testimonial tenant={tenant} />
       <ForParents tenant={tenant} />
       <Trust tenant={tenant} />
     </>

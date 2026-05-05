@@ -16,7 +16,7 @@ const iconMap = {
 
 export function Trust({ tenant }: TrustProps) {
   return (
-    <section id="vertrauen" className="bg-white py-20 sm:py-28">
+    <section id="vertrauen" className="bg-white py-16 sm:py-28">
       <Container width="wide">
         <SectionHeading
           eyebrow="Vertrauen"
@@ -25,7 +25,7 @@ export function Trust({ tenant }: TrustProps) {
           className="mx-auto"
         />
 
-        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <ul className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-8">
           {tenant.trust.items.map((item) => (
             <TrustCard key={item.title} item={item} />
           ))}

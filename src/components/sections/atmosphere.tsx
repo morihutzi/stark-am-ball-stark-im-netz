@@ -14,10 +14,10 @@ export function Atmosphere({ tenant }: AtmosphereProps) {
   const { atmosphere } = tenant
 
   return (
-    <section className="bg-surface py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
-        <figure className="overflow-hidden rounded-3xl">
-          <div className="relative aspect-[16/9] w-full">
+    <section className="bg-white py-12 sm:py-20">
+      <div className="mx-auto max-w-5xl px-5 sm:px-8">
+        <figure className="overflow-hidden rounded-2xl sm:rounded-3xl">
+          <div className="relative aspect-[4/3] w-full sm:aspect-[21/9]">
             <Image
               src={atmosphere.image.src}
               alt={atmosphere.image.alt}
@@ -27,11 +27,11 @@ export function Atmosphere({ tenant }: AtmosphereProps) {
               priority={false}
             />
           </div>
-          <figcaption className="mt-8 text-center">
-            <blockquote className="mx-auto max-w-2xl text-2xl font-bold leading-tight text-foreground sm:text-3xl md:text-4xl">
+          <figcaption className="mt-5 text-center sm:mt-7">
+            <blockquote className="mx-auto max-w-2xl text-lg font-bold leading-tight text-foreground sm:text-2xl md:text-3xl">
               {`„${atmosphere.quote}"`}
             </blockquote>
-            <p className="mt-4 text-sm font-medium text-foreground/55">
+            <p className="mt-2 text-sm font-medium text-foreground/55 sm:mt-3">
               {atmosphere.attribution}
             </p>
           </figcaption>

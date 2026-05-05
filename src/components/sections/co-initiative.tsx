@@ -9,7 +9,7 @@ type CoInitiativeProps = {
 
 /**
  * Drei Werte, die im Sport selbstverständlich sind und im digitalen Alltag
- * erst noch gelernt werden müssen. Pro Wert je eine Sport- und eine
+ * erst noch gelernt werden müssen. Pro Wert je eine konkrete Sport- und eine
  * Online-Entsprechung — die Brücke, die das Konzeptpapier rhetorisch
  * aufmacht, hier visuell auf den Punkt gebracht.
  */
@@ -17,26 +17,26 @@ const PILLARS = [
   {
     icon: Heart,
     title: 'Respekt',
-    sport: 'Faires Spiel auf dem Platz.',
-    online: 'Faires Wort im Chat.',
+    sport: 'Den Schiri akzeptieren, auch wenn die Entscheidung nicht passt.',
+    online: 'Im Klassenchat respektvoll bleiben, auch wenn die Stimmung kippt.',
   },
   {
     icon: ListChecks,
     title: 'Klare Regeln',
-    sport: 'Trainingszeiten draußen.',
-    online: 'Bildschirmzeiten drinnen.',
+    sport: 'Zum Training kommen, auch wenn man müde ist.',
+    online: 'Bildschirmzeit einhalten, auch wenn das Spiel weiterläuft.',
   },
   {
     icon: Shield,
     title: 'Verantwortung',
-    sport: 'Für sich und das Team.',
-    online: 'Für die eigenen Daten.',
+    sport: 'Hinter dem Team stehen, auch wenn man auf der Bank sitzt.',
+    online: 'Nicht mitlachen, wenn die Gruppe jemanden fertigmacht.',
   },
 ] as const
 
 export function CoInitiative({ tenant }: CoInitiativeProps) {
   return (
-    <section id="gemeinsam" className="bg-surface py-20 sm:py-28">
+    <section id="gemeinsam" className="bg-surface py-16 sm:py-28">
       <Container width="wide">
         <SectionHeading
           eyebrow="Sport und Smartphone"
@@ -45,7 +45,7 @@ export function CoInitiative({ tenant }: CoInitiativeProps) {
           className="mx-auto"
         />
 
-        <p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-foreground/80 sm:text-xl">
+        <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl">
           {tenant.coInitiative.body}
         </p>
 
@@ -58,7 +58,7 @@ export function CoInitiative({ tenant }: CoInitiativeProps) {
                 key={pillar.title}
                 className="flex flex-col rounded-3xl bg-white p-6 sm:p-8"
               >
-                <div className="flex size-12 items-center justify-center rounded-2xl bg-primary text-white">
+                <div className="flex size-12 items-center justify-center rounded-lg bg-primary text-white">
                   <Icon className="size-6" strokeWidth={2.2} aria-hidden />
                 </div>
                 <h3 className="mt-5 text-xl font-bold text-foreground">{pillar.title}</h3>
@@ -82,7 +82,7 @@ export function CoInitiative({ tenant }: CoInitiativeProps) {
         </div>
 
         {tenant.coInitiative.closing ? (
-          <p className="mx-auto mt-10 max-w-3xl text-center text-lg font-semibold leading-relaxed text-foreground sm:text-xl">
+          <p className="mx-auto mt-8 max-w-3xl text-center text-base font-semibold leading-relaxed text-foreground sm:mt-10 sm:text-xl">
             {tenant.coInitiative.closing}
           </p>
         ) : null}

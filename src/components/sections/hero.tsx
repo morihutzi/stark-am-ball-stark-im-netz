@@ -11,25 +11,49 @@ export function Hero({ tenant }: HeroProps) {
   const { hero } = tenant
 
   return (
-    <section id="top" className="relative overflow-hidden bg-surface">
-      <Container width="wide" className="py-16 sm:py-24 lg:py-28">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
-          <div>
-            <p className="mb-5 text-sm font-semibold uppercase tracking-widest text-foreground/60">
+    <section id="top" className="relative flex min-h-[72svh] items-center overflow-hidden bg-surface sm:min-h-0 sm:block">
+      {/* Mobile-only: unscharfes Hintergrundbild mit warmem Scrim, damit der
+       * dunkle Text lesbar bleibt. Auf sm+ verstecken — dort übernimmt die
+       * Bild-Karte rechts den visuellen Anker. */}
+      <div
+        className="pointer-events-none absolute inset-0 overflow-hidden sm:hidden"
+        aria-hidden
+      >
+        <Image
+          src={hero.image.src}
+          alt=""
+          fill
+          sizes="100vw"
+          className="scale-105 object-cover blur-[2px]"
+          priority
+        />
+        {/* Minimaler Scrim — das eigentliche Frosted-Glass macht die Text-Card
+         * mit backdrop-blur. Hier nur ein Hauch Wärme. */}
+        <div className="absolute inset-0 bg-surface/15" />
+      </div>
+
+      <Container width="wide" className="relative py-8 sm:py-24 lg:py-28">
+        <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+          {/* Auf Mobile: Frosted-Glass-Card über dem Blur-Bild. backdrop-blur
+           * + halbtransparentes Weiß + zarter weißer Rand = Glas-Optik.
+           * Auf sm+ alles zurücksetzen. */}
+          <div className="rounded-3xl border border-white/15 bg-foreground/35 p-6 shadow-[0_12px_32px_rgba(0,0,0,0.18)] backdrop-blur-2xl backdrop-saturate-150 sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none sm:backdrop-blur-none sm:backdrop-saturate-100">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-white/80 sm:mb-5 sm:text-sm sm:text-foreground/60">
               {hero.eyebrow}
             </p>
-            <h1 className="text-4xl font-bold leading-[1.05] text-foreground sm:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="text-[2rem] font-bold leading-[1.1] text-white sm:text-5xl sm:text-foreground lg:text-6xl xl:text-7xl">
               {hero.headline}
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-foreground/75 sm:text-lg">
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-white/90 sm:mt-6 sm:text-lg sm:text-foreground/75">
               {hero.subheadline}
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
               <Button
                 href={hero.primaryCta.href}
                 external={hero.primaryCta.external}
                 size="lg"
+                className="w-full sm:w-auto"
               >
                 {hero.primaryCta.label}
               </Button>
@@ -39,6 +63,7 @@ export function Hero({ tenant }: HeroProps) {
                   external={hero.secondaryCta.external}
                   variant="secondary"
                   size="lg"
+                  className="w-full sm:w-auto"
                 >
                   {hero.secondaryCta.label}
                 </Button>
@@ -46,11 +71,13 @@ export function Hero({ tenant }: HeroProps) {
             </div>
 
             {hero.primaryCta.microcopy ? (
-              <p className="mt-4 text-sm text-foreground/60">{hero.primaryCta.microcopy}</p>
+              <p className="mt-4 text-sm text-white/75 sm:text-foreground/60">{hero.primaryCta.microcopy}</p>
             ) : null}
           </div>
 
-          <div className="relative">
+          {/* Bild-Karte nur ab sm sichtbar; auf Mobile übernimmt das blurred
+           * Hintergrundbild diesen Anker. */}
+          <div className="relative hidden sm:block">
             <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-white shadow-[0_24px_60px_rgba(74,74,73,0.18)]">
               <Image
                 src={hero.image.src}
