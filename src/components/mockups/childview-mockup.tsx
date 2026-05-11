@@ -109,7 +109,7 @@ export function ChildviewMockup() {
   const currentTime = '14:07'
 
   return (
-    <PhoneFrame className="max-w-[200px] sm:max-w-[220px]">
+    <PhoneFrame className="max-w-[220px]">
       {/* Top gradient overlay (mimic iOS Childview) */}
       <div
         className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[110px]"
