@@ -11,7 +11,7 @@ export function Hero({ tenant }: HeroProps) {
   const { hero } = tenant
 
   return (
-    <section id="top" className="relative flex min-h-[72svh] items-center overflow-hidden bg-surface sm:min-h-0 sm:block">
+    <section id="top" className="relative flex min-h-[60svh] items-center overflow-hidden bg-surface sm:min-h-0 sm:block">
       {/* Mobile-only: unscharfes Hintergrundbild mit warmem Scrim, damit der
        * dunkle Text lesbar bleibt. Auf sm+ verstecken — dort übernimmt die
        * Bild-Karte rechts den visuellen Anker. */}
@@ -32,7 +32,7 @@ export function Hero({ tenant }: HeroProps) {
         <div className="absolute inset-0 bg-surface/15" />
       </div>
 
-      <Container width="wide" className="relative py-8 sm:py-24 lg:py-28">
+      <Container width="wide" className="relative py-6 sm:py-14 lg:py-16">
         <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
           {/* Auf Mobile: Frosted-Glass-Card über dem Blur-Bild. backdrop-blur
            * + halbtransparentes Weiß + zarter weißer Rand = Glas-Optik.
@@ -41,7 +41,7 @@ export function Hero({ tenant }: HeroProps) {
             <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-white/80 sm:mb-5 sm:text-sm sm:text-foreground/60">
               {hero.eyebrow}
             </p>
-            <h1 className="text-[2rem] font-bold leading-[1.1] text-white sm:text-5xl sm:text-foreground lg:text-6xl xl:text-7xl">
+            <h1 className="text-[1.75rem] font-bold leading-[1.1] text-balance text-white sm:text-4xl sm:text-foreground lg:text-5xl xl:text-6xl">
               {hero.headline}
             </h1>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-white/90 sm:mt-6 sm:text-lg sm:text-foreground/75">
@@ -78,7 +78,7 @@ export function Hero({ tenant }: HeroProps) {
           {/* Bild-Karte nur ab sm sichtbar; auf Mobile übernimmt das blurred
            * Hintergrundbild diesen Anker. */}
           <div className="relative hidden sm:block">
-            <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-white shadow-[0_24px_60px_rgba(74,74,73,0.18)]">
+            <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-white shadow-[0_24px_60px_rgba(74,74,73,0.18)] lg:aspect-[5/4]">
               <Image
                 src={hero.image.src}
                 alt={hero.image.alt}
