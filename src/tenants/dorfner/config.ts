@@ -18,7 +18,7 @@ export const dorfnerConfig: TenantConfig = {
 
   hero: {
     eyebrow: 'Initiative Digitale Balance · Hans Dorfner Fußballschule × Kidgonet',
-    headline: 'Sport hat einen Gegner bekommen, der in jede Hosentasche passt.',
+    headline: 'Klare Regeln. Auf dem Platz und am Smartphone.',
     subheadline:
       'Kinder bewegen sich heute weniger als jede Generation vor ihnen, und der Bildschirm ist einer der Gründe. Hans Dorfner und Kidgonet starten gemeinsam eine Initiative für digitale Balance im Nachwuchssport. Mit dem Medienführerschein und drei Monaten Kidgonet App, kostenlos für Familien der Fußballschule.',
     primaryCta: {
