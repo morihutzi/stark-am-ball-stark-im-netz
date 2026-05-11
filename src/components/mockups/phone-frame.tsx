@@ -15,7 +15,7 @@ export function PhoneFrame({ children, className }: PhoneFrameProps) {
   return (
     <div
       className={cn(
-        'relative mx-auto aspect-[9.5/20] w-full max-w-[230px] overflow-hidden rounded-[2.4rem] bg-[#1a1a19] p-[6px] shadow-[0_24px_60px_rgba(74,74,73,0.18)] [isolation:isolate]',
+        'relative mx-auto aspect-[9.5/20] w-full max-w-[230px] rounded-[2.4rem] bg-[#1a1a19] p-[6px] shadow-[0_24px_60px_rgba(74,74,73,0.18)]',
         className
       )}
     >
