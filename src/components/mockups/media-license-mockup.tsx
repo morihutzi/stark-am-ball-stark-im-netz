@@ -16,11 +16,8 @@ const CARDS = [
   'Video schneiden',
   'Vokabeltrainer',
   'Minecraft bauen',
-  'YouTube-Lernvideo',
   'Roblox zocken',
   'Foto bearbeiten',
-  'GarageBand',
-  'Wikipedia lesen',
 ]
 
 export function MediaLicenseMockup() {
@@ -72,33 +69,25 @@ function BrowserContent() {
       </div>
 
       {/* Orange Header-Banner mit Aufgabentitel */}
-      <div className="rounded-b-2xl bg-primary px-3 pb-3 pt-2 text-white">
-        <span className="text-[8px] font-bold">Medienführerschein</span>
-        <h3 className="mt-2 text-center text-[11px] font-extrabold leading-tight">
+      <div className="rounded-b-2xl bg-primary px-3 pb-2 pt-1.5 text-white">
+        <span className="text-[7px] font-bold">Medienführerschein</span>
+        <h3 className="mt-1 text-center text-[10px] font-extrabold leading-tight">
           App-Karten sortieren: Lernen, Kreativ, Unterhaltung
         </h3>
       </div>
 
       {/* Inhalt */}
-      <div className="flex flex-1 flex-col gap-1.5 px-3 pb-2 pt-2">
-        {/* Aufgaben-Hinweis */}
-        <div className="rounded-md bg-white px-2.5 py-1.5">
-          <p className="text-[9px] font-bold text-primary">Gute Zeit, smarte Zeit</p>
-          <p className="mt-0.5 text-[7px] leading-tight text-foreground/65">
-            Ziehe die Karten in die passende Säule: Lernen, Kreativ oder Unterhaltung.
-          </p>
-        </div>
-
+      <div className="flex flex-1 flex-col gap-1 px-2.5 pb-1.5 pt-1.5">
         {/* Karten-Pool */}
-        <div className="rounded-md bg-white px-2 py-1.5">
-          <p className="mb-1 text-center text-[7px] font-semibold text-foreground/60">
+        <div className="rounded-md bg-white px-2 py-1">
+          <p className="mb-0.5 text-center text-[7px] font-semibold text-foreground/60">
             Karten ({CARDS.length}/15)
           </p>
           <div className="flex flex-wrap justify-center gap-1">
             {CARDS.map((card) => (
               <span
                 key={card}
-                className="rounded-[6px] border border-border bg-white px-1.5 py-[3px] text-[7px] font-medium text-foreground"
+                className="rounded-[6px] border border-border bg-white px-1.5 py-[2px] text-[7px] font-medium text-foreground"
               >
                 {card}
               </span>
@@ -107,7 +96,7 @@ function BrowserContent() {
         </div>
 
         {/* Drop-Zonen */}
-        <div className="grid flex-1 grid-cols-3 gap-1.5">
+        <div className="grid flex-1 grid-cols-3 gap-1">
           <DropZone label="Lernen" labelClass="text-[#5a8a00]" bgClass="bg-[#f4f7e0]" />
           <DropZone label="Kreativ" labelClass="text-[#6b5cd9]" bgClass="bg-[#f1edff]" />
           <DropZone label="Unterhaltung" labelClass="text-primary" bgClass="bg-[#fdf3d8]" />
