@@ -236,10 +236,11 @@ export function ChildviewMockup() {
               />
             </svg>
 
-            {/* Lock-State als HTML-Overlay (Icon + Text). Im Countdown-State
-             * wird die Schrift komplett im SVG gerendert. */}
+            {/* Lock-State als HTML-Overlay (Icon + Text). Absolute, damit das
+             * aspect-square-Parent nicht von h-full-Content in die Höhe
+             * gezogen wird (iOS-Safari aspect-ratio + h-full Bug). */}
             {isBlocked ? (
-              <div className="relative flex h-full w-full items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center">
                 <div className="flex flex-col items-center gap-1 text-center">
                   <Clock className="size-7 text-primary" strokeWidth={2.5} aria-hidden />
                   <span className="text-[13px] font-extrabold text-foreground">Zeit vorbei</span>
