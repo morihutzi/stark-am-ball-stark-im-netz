@@ -17,10 +17,10 @@ export const dorfnerConfig: TenantConfig = {
   },
 
   hero: {
-    eyebrow: 'Eine Initiative der Hans Dorfner Fußballschule und Kidgonet',
-    headline: 'Klare Regeln. Auf dem Platz und am Smartphone.',
+    eyebrow: 'Initiative Digitale Balance · Hans Dorfner Fußballschule × Kidgonet',
+    headline: 'Sport hat einen Gegner bekommen, der in jede Hosentasche passt.',
     subheadline:
-      'Damit Ihr Kind die Werte aus dem Training auch online erlebt: Respekt, klare Regeln, Verantwortung. Mit dem Medienführerschein und der Kidgonet App, kostenlos für Familien der Hans Dorfner Fußballschule.',
+      'Kinder bewegen sich heute weniger als jede Generation vor ihnen, und der Bildschirm ist einer der Gründe. Hans Dorfner und Kidgonet starten gemeinsam eine Initiative für digitale Balance im Nachwuchssport. Mit dem Medienführerschein und drei Monaten Kidgonet App, kostenlos für Familien der Fußballschule.',
     primaryCta: {
       label: 'Mehr für Eltern',
       href: '#fuer-eltern',
@@ -32,9 +32,9 @@ export const dorfnerConfig: TenantConfig = {
   },
 
   coInitiative: {
-    headline: 'Was im Training gilt, gilt auch online.',
-    body: 'Auf dem Platz lernt Ihr Kind Schritt für Schritt: erst der Pass, dann der Schuss, dann das Spiel. Mit dem Medienführerschein lernt es genauso, was im Netz wichtig ist: in kleinen Etappen, kindgerecht, mit Aha-Effekt.',
-    closing: 'Damit zu Hause weniger diskutiert und mehr gespielt wird.',
+    headline: 'Eine Antwort von zwei Seiten.',
+    body: 'Hans Dorfner sieht es im Camp, Kidgonet sieht es im Familienalltag: Bildschirmzeit verdrängt Bewegung, und Eltern fehlt ein klarer Weg. Unsere gemeinsame Antwort: Aufklärung für die Kinder und Werkzeuge für die Eltern. Kostenlos für jede Familie der Fußballschule.',
+    closing: 'Damit zu Hause weniger diskutiert wird. Und auf dem Platz mehr gespielt.',
   },
 
   atmosphere: {
@@ -42,14 +42,14 @@ export const dorfnerConfig: TenantConfig = {
       src: '/images/camp-team-huddle.jpg',
       alt: 'Junges Team im Kreis auf dem Platz, Hans Dorfner Fußballschule',
     },
-    quote: 'Was auf dem Platz gilt, gilt auch online.',
+    quote: 'Auf dem Platz gibt es keine Bildschirme. Nur Bälle.',
     attribution: 'Ein Tag im Camp der Hans Dorfner Fußballschule.',
   },
 
   forParents: {
     headline: 'Das bekommen Sie als Familie.',
     subheadline:
-      'Zwei Werkzeuge, die Familien der Hans Dorfner Fußballschule kostenlos nutzen können.',
+      'Das Lernprogramm für die Kinder, die App für die Eltern. Beides kostenlos für Familien der Hans Dorfner Fußballschule.',
     mediaLicense: {
       eyebrow: 'Der Medienführerschein',
       title: 'Spielerisch lernen, was im Netz zählt.',
@@ -129,7 +129,7 @@ export const dorfnerConfig: TenantConfig = {
     quote: 'Kidgonet vereint pädagogische Verantwortung und Sicherheit.',
     attribution: 'Manuel Neuer, Weltmeister und Vater',
     cta: {
-      label: 'Jetzt downloaden!',
+      label: 'Jetzt kostenlos starten',
       href: 'https://portal.kidgonet.de/welcome',
       external: true,
     },
