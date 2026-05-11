@@ -84,7 +84,7 @@ export function Hero({ tenant }: HeroProps) {
                 alt={hero.image.alt}
                 width={800}
                 height={1000}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-[center_25%]"
                 priority
               />
             </div>
